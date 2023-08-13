@@ -5,7 +5,7 @@ import { liveStreamRouter } from "./routers/live-stream-router";
 
 const restAPIPort = 3000;
 
-const streamyardCloneAPIServer: Express = express();
+export const streamyardCloneAPIServer: Express = express();
 
 streamyardCloneAPIServer.get("/health", (req: Request, res: Response) => {
   res.send("StreamyardCloneAPI server heathly");
