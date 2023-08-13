@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "start": "ts-node ./src/index.ts"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.1"
+  },
+  "dependencies": {
+    "@types/node": "^20.4.10",
+    "dotenv": "^16.3.1"
+  }
+}

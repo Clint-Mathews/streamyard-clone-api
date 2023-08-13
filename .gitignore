@@ -1,0 +1,53 @@
+# Node.js dependencies
+node_modules/
+
+# Compiled TypeScript output
+dist/
+build/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Logs and debugging files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+debug.log
+debug/
+log/
+
+# Environment files
+.env
+
+# Compiled binary addons
+*.node
+
+# macOS specific files
+.DS_Store
+
+# Windows thumbnail cache files
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Visual Studio Code settings
+.vscode/settings.json
+
+# ESLint cache
+.eslintcache
+
+# Jest test results
+test-results/
+
+# Prettier cache
+.prettier-cache
