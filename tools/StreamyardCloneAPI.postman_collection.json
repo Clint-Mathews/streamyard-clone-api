@@ -1,0 +1,119 @@
+{
+	"info": {
+		"_postman_id": "a16af817-6c7d-4cf5-8f06-44003cfa1dc4",
+		"name": "StreamyardCloneAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{StreamyardCloneAPIURL}}/user",
+							"host": [
+								"{{StreamyardCloneAPIURL}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Overlay",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{StreamyardCloneAPIURL}}/overlay",
+							"host": [
+								"{{StreamyardCloneAPIURL}}"
+							],
+							"path": [
+								"overlay"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "LiveStream",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{StreamyardCloneAPIURL}}/live-stream",
+							"host": [
+								"{{StreamyardCloneAPIURL}}"
+							],
+							"path": [
+								"live-stream"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{StreamyardCloneAPIURL}}/health",
+					"host": [
+						"{{StreamyardCloneAPIURL}}"
+					],
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "StreamyardCloneAPIURL",
+			"value": "http://localhost:3000",
+			"type": "default"
+		}
+	]
+}
