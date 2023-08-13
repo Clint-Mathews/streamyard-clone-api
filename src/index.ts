@@ -1,22 +1,15 @@
-import * as http from "http";
-import { environment } from "./config/environment";
+import express, { Express, Request, Response } from "express";
 
 const restAPIPort = 3000;
-const streamyardCloneAPIServer = http.createServer(
-  (req: http.IncomingMessage, res: http.ServerResponse) => {
-    res.write("Hello World!");
-    res.end();
-  }
-);
 
-streamyardCloneAPIServer.listen(restAPIPort, () => {
-  console.log(`StreamyardCloneAPI server running on port ${restAPIPort}.`);
+const streamyardCloneAPIServer: Express = express();
+
+streamyardCloneAPIServer.get("/", (req: Request, res: Response) => {
+  res.send("StreamyardCloneAPI server");
 });
 
-process.on("SIGINT", () => {
-  console.log("Shutting StreamyardCloneAPI server down...");
-  streamyardCloneAPIServer.close(() => {
-    console.log("StreamyardCloneAPI server closed.");
-    process.exit(0);
-  });
+streamyardCloneAPIServer.listen(restAPIPort, () => {
+  console.log(
+    `[server]: StreamyardCloneAPI server is running at port: ${restAPIPort}`
+  );
 });
