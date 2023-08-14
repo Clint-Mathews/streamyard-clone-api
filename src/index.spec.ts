@@ -1,12 +1,20 @@
 import request from "supertest";
 import { Express } from "express";
-import { streamyardCloneAPIServer } from "../src/index"; // Import your Express server
+import {
+  closeStreamyardCloneAPIServer,
+  streamyardCloneAPIServer,
+} from "../src/index"; // Import your Express server
 
 describe("StreamyardCloneAPI Server", () => {
   let app: Express;
 
   beforeAll(() => {
     app = streamyardCloneAPIServer;
+  });
+
+  afterAll((done) => {
+    closeStreamyardCloneAPIServer();
+    done();
   });
 
   it('responds with "StreamyardCloneAPI server heathly" on /health', async () => {

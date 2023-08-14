@@ -15,8 +15,18 @@ streamyardCloneAPIServer.use("/user", userRouter);
 streamyardCloneAPIServer.use("/overlay", overLayRouter);
 streamyardCloneAPIServer.use("/live-stream", liveStreamRouter);
 
-streamyardCloneAPIServer.listen(restAPIPort, () => {
-  console.log(
-    `[server]: StreamyardCloneAPI server is running at port: ${restAPIPort}`
-  );
-});
+const listenstreamyardCloneAPIServer = streamyardCloneAPIServer.listen(
+  restAPIPort,
+  () => {
+    console.log(
+      `[server]: StreamyardCloneAPI server is running at port: ${restAPIPort}`
+    );
+  }
+);
+
+export function closeStreamyardCloneAPIServer() {
+  listenstreamyardCloneAPIServer.close();
+  console.log("[server]: StreamyardCloneAPI server closed.");
+}
+
+process.on("SIGINT", () => closeStreamyardCloneAPIServer());
