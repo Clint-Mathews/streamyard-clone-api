@@ -17,7 +17,7 @@ RUN npm run build
 
 FROM $BASE_IMG as release
 RUN apk update && \
-    apk ugrade && \
+    apk upgrade && \
     rm -rf /var/cache/apk/*
 ENV NODE_ENV production
 ENV DD_SERVICE streamyard-clone-api
